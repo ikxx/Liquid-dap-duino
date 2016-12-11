@@ -4,7 +4,7 @@ Daphile (Squeezebox) control with arduino and LCD
 ##Important note
 I'm arduino newbee, so excuse my errors...
 
-This sketch uses 40x4 LCD so special library is used - check tribute to...
+This sketch uses 40x4 LCD so special library is used - check tribute to... It can easily be replaced with standard LiquidCrystal lbrary.
 
 Squeezebox returns text encoded in UTF8.
 
@@ -15,8 +15,10 @@ Add buttons for simple control (play/pause/next/previous/vol up|dn)
 
 Improve UTF8 decoding
 
+Add special LCD icons for play/pause/stop and repeat none|song|playlist
+
 ##Tribute to
-http://www.daphile.com/ Marvelous linux squeezeboy player
+http://www.daphile.com/ Marvelous linux squeezebox player
 
 https://github.com/Logitech for squeezebox stuff
 
