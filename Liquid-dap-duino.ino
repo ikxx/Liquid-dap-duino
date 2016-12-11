@@ -6,6 +6,8 @@
 LiquidCrystal lcd(12, 11, 9,  10,   8,  7,  6,  5);
 //                rs, rw, en1, en2, d0, d1, d2, d3
 
+
+//fix these if using different LCD
 byte maxCols = 40;
 byte maxRows = 4;
 
@@ -63,12 +65,12 @@ void setup()
 {
   delay(1000);
 
-  String initLines[] = { "", "DAPHILE 2 DDDAC1794S", "", "waiting for player..." };
-
-  lcd.begin(40, 4);
-  lcd.clear();
-  printLines(initLines,4,true);
+  lcd.begin(maxCols, maxRows);
   Serial.begin(9600);
+  
+  String initLines[] = { "Liquid-dap-duino", "DAPHILE 2 DDDAC1794S", "", "waiting for player..." };
+  printLines(initLines,4,true);
+
   delay(1000);
   findPlayerId();
 
@@ -78,7 +80,7 @@ void setup()
     findPlayerId();
   }
 
-  lcd.setCursor(0, 3);
+  lcd.setCursor(0, 2);
   lcd.print(playerId);
 
   Serial.println(String(playerId) + " status - 1 tags:oTIalG subscribe:5");
