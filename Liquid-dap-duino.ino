@@ -195,6 +195,10 @@ volume = getValue("mixer volume", volume);
   {
     String("MP3").toCharArray(type, 5);
   }
+  else if (String("alc") == String(type))
+  {
+    String("ALAC").toCharArray(type, 5);
+  }
 
 
   //displayInfo[3] = type + " " + samplerate + "bits " + samplesize + "Hz";
