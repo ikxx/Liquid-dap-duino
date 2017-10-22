@@ -3,7 +3,8 @@
 
 //SoftwareSerial Serial1(3, 2);
 
-LiquidCrystal lcd(12, 11, 9,  10,   8,  7,  6,  5);
+
+LiquidCrystal lcd(11, 10,   9,  12,  8,  7,  6,  5);
 //                rs, rw, en1, en2, d0, d1, d2, d3
 
 
